@@ -24,10 +24,15 @@ public class BookController {
 	}
 
 	@GetMapping("/")
-	@ResponseBody
 	public String home() {
-	    return "App running";
+	    return "forward:/index.jsp";
 	}
+	
+	@GetMapping("/test")
+	public String test() {
+	    return "App is running";
+	}
+
 	@PostMapping("/addbook")
 	public String saveBook(Book book) {
 
