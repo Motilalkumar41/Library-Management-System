@@ -24,10 +24,10 @@ public class BookController {
 	}
 
 	@GetMapping("/")
+	@ResponseBody
 	public String home() {
-		return "index";
+	    return "App running";
 	}
-
 	@PostMapping("/addbook")
 	public String saveBook(Book book) {
 
